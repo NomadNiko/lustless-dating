@@ -20,7 +20,7 @@ export default function About() {
         },
     ];
     return (
-        <div id="about" className="w-full px-[12%] py-10 scroll-mt-20 mt-20 md:mt-0">
+        <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
             <h4 className="text-center mb-2 text-xl md:text-2xl font-Ovo">What makes us different</h4>
             <h2 className="text-center text-5xl sm:text-6xl font-Ovo">Why Lustless?</h2>
 

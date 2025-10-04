@@ -10,15 +10,15 @@ export default function Footer() {
                     <img src="/assets/mail_icon.png" alt="" className="w-5 dark:hidden" />
                     <img src="/assets/mail_icon_dark.png" alt="" className="w-5 hidden dark:block" />
 
-                    <a href="mailto:hello@lustless.app">hello@lustless.app</a>
+                    <a href="mailto:lustless@nomadsoft.us">lustless@nomadsoft.us</a>
                 </div>
             </div>
             <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-3 text-base md:text-lg">
                 <p>© {new Date().getFullYear()} Lustless. All rights reserved.</p>
                 <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
-                    <li><a target='_blank' href="#">Instagram</a></li>
-                    <li><a target='_blank' href="#">Twitter</a></li>
-                    <li><a target='_blank' href="#">TikTok</a></li>
+                    <li><a target='_blank' href="https://nomadsoft.us">Corporate</a></li>
+                    <li><a target='_blank' href="https://github.com/NomadNiko">GitHub</a></li>
+                    <li><a href="mailto:press@nomadsoft.us">Press</a></li>
                 </ul>
             </div>
         </div>

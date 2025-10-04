@@ -14,7 +14,32 @@ const ovo = Ovo({
 
 export const metadata = {
     title: "Lustless - Dating Beyond the Surface",
-    description: "Lustless is a revolutionary dating app where verified users connect through conversation, not photos. No bots, no catfishing - just authentic connections based on personality and compatibility.",
+    description: "Connect through meaningful conversation, not appearances. Verified users, no bots, no catfishing. Just authentic connections based on who you really are.",
+    metadataBase: new URL('https://lustless.barvibez.app'),
+    openGraph: {
+        title: "Lustless - Dating Beyond the Surface",
+        description: "Connect through meaningful conversation, not appearances. Verified users, no bots, no catfishing. Just authentic connections based on who you really are.",
+        url: 'https://lustless.barvibez.app',
+        siteName: 'Lustless',
+        locale: 'en_US',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: "Lustless - Dating Beyond the Surface",
+        description: "Connect through meaningful conversation, not appearances. Verified users, no bots, no catfishing. Just authentic connections based on who you really are.",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
 };
 
 export default function RootLayout({ children }) {

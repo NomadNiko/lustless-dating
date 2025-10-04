@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-[150px] md:pt-0">
+        <div className="w-11/12 max-w-3xl text-center mx-auto min-h-screen flex flex-col items-center justify-center gap-4 py-32 md:py-0">
             <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
                 Welcome to Lustless
                 <img src="/assets/hand-icon.png" alt="" className="w-6 mb-1" />
@@ -13,7 +13,7 @@ export default function Header() {
             </div>
             <h1 className="text-5xl sm:text-6xl font-Ovo">Dating beyond the surface.</h1>
             <p className="max-w-2xl mx-auto font-Ovo text-xl md:text-2xl">
-                Connect through conversation, not appearances.<br />
+                Connect through meaningful conversation, not appearances.<br />
                 Verified users, no bots, no catfishing.<br />
                 Just authentic connections based on who you really are.
             </p>
