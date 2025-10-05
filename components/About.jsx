@@ -1,28 +1,33 @@
+'use client'
+import { useTranslations } from 'next-intl';
+
 export default function About() {
+    const t = useTranslations('about');
+
     const data = [
         {
-            name: 'Verified Identity',
+            name: t('features.verifiedIdentity.title'),
             icon1: '/assets/code-icon.png',
             icon2: '/assets/code-icon-dark.png',
-            description: 'Selfie and ID verification ensures every user is real and authentic',
+            description: t('features.verifiedIdentity.description'),
         },
         {
-            name: 'No Photos First',
+            name: t('features.noPhotosFirst.title'),
             icon1: '/assets/edu-icon.png',
             icon2: '/assets/edu-icon-dark.png',
-            description: 'Connect through conversation, see photos only when you both feel ready',
+            description: t('features.noPhotosFirst.description'),
         },
         {
-            name: 'Zero Tolerance',
+            name: t('features.zeroTolerance.title'),
             icon1: '/assets/project-icon.png',
             icon2: '/assets/project-icon-dark.png',
-            description: 'No bots, no catfishing, no fake profiles - just genuine people',
+            description: t('features.zeroTolerance.description'),
         },
     ];
     return (
         <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
-            <h4 className="text-center mb-2 text-xl md:text-2xl font-Ovo">What makes us different</h4>
-            <h2 className="text-center text-5xl sm:text-6xl font-Ovo">Why Lustless?</h2>
+            <h4 className="text-center mb-2 text-xl md:text-2xl font-Ovo">{t('sectionTitle')}</h4>
+            <h2 className="text-center text-5xl sm:text-6xl font-Ovo">{t('mainTitle')}</h2>
 
             <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
                 <div className="max-w-max mx-auto relative">
@@ -34,7 +39,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className="flex-1">
-                    <p className="mb-10 max-w-2xl font-Ovo text-base md:text-lg">Dating apps have become superficial. We believe real connection starts with conversation, not a swipe based on appearance. Lustless brings back the excitement of getting to know someone for who they really are.</p>
+                    <p className="mb-10 max-w-2xl font-Ovo text-base md:text-lg">{t('description')}</p>
 
                     <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
                         {data.map((data) => (

@@ -1,7 +1,9 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl';
 
 export default function Navbar() {
+    const t = useTranslations('navbar');
     const sideMenuRef = useRef();
     const navRef = useRef();
     const navLinkRef = useRef();
@@ -54,11 +56,11 @@ export default function Navbar() {
                 </a>
 
                 <ul ref={navLinkRef} className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent text-base md:text-lg">
-                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#top">Home</a></li>
-                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#about">Why Lustless</a></li>
-                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#services">Features</a></li>
-                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#work">How It Works</a></li>
-                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#contact">Join Waitlist</a></li>
+                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#top">{t('links.home')}</a></li>
+                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#about">{t('links.whyLustless')}</a></li>
+                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#services">{t('links.features')}</a></li>
+                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#work">{t('links.howItWorks')}</a></li>
+                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#contact">{t('links.joinWaitlist')}</a></li>
                 </ul>
 
                 <div className="flex items-center gap-4">
@@ -68,7 +70,7 @@ export default function Navbar() {
                     </button>
 
                     <a href="#contact" className="hidden lg:flex items-center gap-3 px-8 py-1.5 border border-gray-300 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full ml-4 font-Ovo dark:border-white/30 text-base md:text-lg">
-                        Join Waitlist
+                        {t('links.joinWaitlist')}
                         <img src="/assets/arrow-icon.png" alt="" className="w-3 dark:hidden" />
                         <img src="/assets/arrow-icon-dark.png" alt="" className="w-3 hidden dark:block" />
                     </a>
@@ -87,11 +89,11 @@ export default function Navbar() {
                         <img src="/assets/close-white.png" alt="" className="w-5 cursor-pointer hidden dark:block" />
                     </div>
 
-                    <li><a href="#top" onClick={closeMenu}>Home</a></li>
-                    <li><a href="#about" onClick={closeMenu}>Why Lustless</a></li>
-                    <li><a href="#services" onClick={closeMenu}>Features</a></li>
-                    <li><a href="#work" onClick={closeMenu}>How It Works</a></li>
-                    <li><a href="#contact" onClick={closeMenu}>Join Waitlist</a></li>
+                    <li><a href="#top" onClick={closeMenu}>{t('links.home')}</a></li>
+                    <li><a href="#about" onClick={closeMenu}>{t('links.whyLustless')}</a></li>
+                    <li><a href="#services" onClick={closeMenu}>{t('links.features')}</a></li>
+                    <li><a href="#work" onClick={closeMenu}>{t('links.howItWorks')}</a></li>
+                    <li><a href="#contact" onClick={closeMenu}>{t('links.joinWaitlist')}</a></li>
                 </ul>
             </nav>
         </>

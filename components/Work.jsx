@@ -1,35 +1,40 @@
+'use client'
+import { useTranslations } from 'next-intl';
+
 export default function Work() {
+    const t = useTranslations('work');
+
     const work = [
         {
-            name: 'Sign Up & Verify',
+            name: t('steps.step1.title'),
             icon: '/assets/work-1.png',
-            description: 'Step 1',
+            description: t('steps.step1.label'),
             link: '',
         },
         {
-            name: 'Create Your Profile',
+            name: t('steps.step2.title'),
             icon: '/assets/work-2.png',
-            description: 'Step 2',
+            description: t('steps.step2.label'),
             link: '',
         },
         {
-            name: 'Start Chatting',
+            name: t('steps.step3.title'),
             icon: '/assets/work-3.png',
-            description: 'Step 3',
+            description: t('steps.step3.label'),
             link: '',
         },
         {
-            name: 'Reveal & Meet',
+            name: t('steps.step4.title'),
             icon: '/assets/work-4.png',
-            description: 'Step 4',
+            description: t('steps.step4.label'),
             link: '',
         }
     ];
     return (
         <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
-            <h4 className="text-center mb-2 text-xl md:text-2xl font-Ovo">Simple Process</h4>
-            <h2 className="text-center text-5xl sm:text-6xl font-Ovo">How It Works</h2>
-            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-base md:text-lg">Getting started with Lustless is simple. Verify your identity, create your profile, connect through conversation, and when you&apos;re both ready, reveal photos and take it offline.</p>
+            <h4 className="text-center mb-2 text-xl md:text-2xl font-Ovo">{t('sectionTitle')}</h4>
+            <h2 className="text-center text-5xl sm:text-6xl font-Ovo">{t('mainTitle')}</h2>
+            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-base md:text-lg">{t('description')}</p>
 
             <div className="grid grid-cols-auto my-10 gap-5 dark:text-black">
                 {work.map((work) => (
